@@ -1,5 +1,6 @@
 venv/
 .idea/
 *.pyc
-service_installer.egg-info
+template_service_installer.egg-info/
+build/
 dist/

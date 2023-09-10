@@ -1,0 +1,13 @@
+[Unit]
+Description=celery worker daemon
+After=some_service.service
+Requires=some_service.service
+
+[Service]
+User=root
+Group=www-data
+WorkingDirectory={work_dir}/
+ExecStart={work_dir}/venv/bin/python -m celery -A project worker -l info
+
+[Install]
+WantedBy=multi-user.target
